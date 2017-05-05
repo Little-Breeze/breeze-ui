@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {getScrollTop, setScrollTop} from './util';
 import Icon from './icon.jsx';
+import '../css/backtop.css';
 
 class BackTop extends Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class BackTop extends Component {
   }
 
   render() {
-    const { className, ...others } = this.props;
+    const { className, alwaysShown, visibleHeight, onHandler, ...others } = this.props;
     const classes = 'back-top ' + className
     return (
       <div className={classes} 
