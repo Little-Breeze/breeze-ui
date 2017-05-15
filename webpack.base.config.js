@@ -7,7 +7,6 @@ const webpack = require('webpack');
 
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
@@ -34,7 +33,7 @@ module.exports = () => {
 
     output: {
       path: distDir,
-      filename: 'js/[name].[hash:8].js'
+      filename: 'js/[name].[hash:8].js',
       publicPath: publicPath
     },
 
@@ -88,7 +87,7 @@ module.exports = () => {
 
     plugins: [
       new HtmlWebpackPlugin({
-        template: appDir + (debug ? '/tmpl-debug.ejs' : '/tmpl.ejs'),
+        template: appDir + '/tmpl.ejs',
         filename: 'index.html',
         inject: 'body',
         // chunks: ['main']
