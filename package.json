@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "prop-types": "^15.5.10",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-tap-event-plugin": "^0.2.2"
