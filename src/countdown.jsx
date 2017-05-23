@@ -112,7 +112,7 @@ class CountDown extends Component {
 CountDown.defaultProps = {
   className: '',
   refresh: 1000, // ms
-  endCallback: () => void 0;
+  endCallback: () => void 0
 };
 
 CountDown.propTypes = {
