@@ -9,7 +9,7 @@ export const mergeProps = (instanceProps, defaultProps) => {
    } = defaultProps;
 
    className = classnames(defaultClassName, className);
-   style = {....defaultStyle, ...style};
+   style = {...defaultStyle, ...style};
    remainingProps = {...instanceProps, ...remainingProps};
 
    return { className, style, ...remainingProps };

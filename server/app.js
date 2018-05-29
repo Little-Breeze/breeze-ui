@@ -42,8 +42,8 @@ app.get('/', function(req, res, next) {
   // res.sendFile(path.join(__dirname, '/demo.html'));
 });
 
-http.createServer(app).listen(process.env.PORT || 3000, function() {
-  let url = util.format('http://%s:%d', 'localhost', 3000);
+http.createServer(app).listen(process.env.PORT || 3001, function() {
+  let url = util.format('http://%s:%d', 'localhost', 3001);
   console.log('Listening at %s', url);
   opn(url + '/index.html');
 });

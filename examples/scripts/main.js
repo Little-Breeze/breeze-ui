@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
+import './styl/normalize.styl';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
