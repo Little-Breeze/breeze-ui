@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {getScrollTop, setScrollTop} from './util';
+import {getScrollTop, setScrollTop} from './helpers/util';
 import Icon from './icon.jsx';
-import '../css/backtop.css';
+// import '../css/backtop.css';
 
 class BackTop extends Component {
   constructor(props) {
