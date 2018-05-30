@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import './appheader.styl';
+import menuIcon from '../../imgs/icon-menu.png';
 
 class AppHeader extends Component {
   constructor(props) {
@@ -8,10 +9,11 @@ class AppHeader extends Component {
   }
 
   render() {
-    const { resize, selected } = this.props;
+    const { resize, selected, onHandleHeaderClick } = this.props;
     return (
       <div className="app-header">
-        { selected }
+        { resize && <img src={menuIcon} onClick={onHandleHeaderClick} /> }
+        <span>{ selected }</span>
       </div>
     );
   }
