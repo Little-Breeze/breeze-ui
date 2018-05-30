@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Tab, Tabs } from '../common/tabs.jsx';
-import '../../../stylus/tab-switch';
+import { Tab, Tabs } from './tabs.jsx';
+import './tab-switch';
 
 export class TabCont extends Component {
 

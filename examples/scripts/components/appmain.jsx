@@ -11,7 +11,6 @@ class AppMain extends Component {
     const { selected } = this.props;
     return (
       <div className="app-content">
-        app main
         {
           listdata[selected]
         }
