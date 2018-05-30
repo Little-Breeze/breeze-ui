@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import listdata from '../listdata';
 import './drawer.styl';
 
 class Drawer extends Component {
@@ -13,8 +14,11 @@ class Drawer extends Component {
     return (
       <div className={classes}>
         <ul>
-          <li>button</li>
-          <li>tip</li>
+          {
+            Object.keys(listdata).map((name, i) => (
+              <li key={i} onClick={() => {this.props.onHandleItemClick(name)}}>{name}</li>
+            ))
+          }
         </ul>
       </div>
     );

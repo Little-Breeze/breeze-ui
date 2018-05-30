@@ -8,10 +8,10 @@ class AppHeader extends Component {
   }
 
   render() {
-    const { resize } = this.props;
+    const { resize, selected } = this.props;
     return (
       <div className="app-header">
-        app header
+        { selected }
       </div>
     );
   }
