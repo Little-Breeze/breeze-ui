@@ -1,0 +1,58 @@
+.hidden
+  display: none
+
+.tooltip
+  width: 100px
+  height: 50px
+  border: 1px solid #e5e5e5
+  color: #687785
+  font-size: 10px
+  text-align: center
+  line-height: 50px
+  background: #fff
+  &::before, &::after
+    border: 10px solid transparent
+    width: 0
+    height: 0
+    position: absolute
+    content: ' '
+  
+  &.bottom
+    &::before, &::after
+      border-bottom: 10px solid #fff
+      left: 50%
+      top: -20px
+      transform: translateX(-50%)
+    &::before
+      border-bottom-color: #e5e5e5
+      top: -21px
+      
+  &.top
+    &::before, &::after
+      border-top: 10px solid #fff
+      left: 50%
+      bottom: -20px
+      transform: translateX(-50%)
+    &::before
+      border-top-color: #e5e5e5
+      bottom: -21px
+    
+  &.right
+    &::before, &::after
+      border-left: 10px solid #fff
+      top: 50%
+      right: -20px
+      transform: translateY(-50%)
+    &::before
+      border-left-color: #e5e5e5
+      right: -21px
+      
+  &.left
+    &::before, &::after
+      border-right: 10px solid #fff
+      top: 50%
+      left: -20px
+      transform: translateY(-50%)
+    &::before
+      border-right-color: #e5e5e5
+      left: -21px

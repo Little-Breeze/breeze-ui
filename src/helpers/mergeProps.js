@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 
-export const mergeProps = (instanceProps, defaultProps) => {
+function mergeProps (instanceProps, defaultProps) {
   let { className, style, ...others } = instanceProps;
   let { 
     className: defaultClassName,
@@ -14,3 +14,5 @@ export const mergeProps = (instanceProps, defaultProps) => {
 
    return { className, style, ...remainingProps };
 };
+
+export default mergeProps;

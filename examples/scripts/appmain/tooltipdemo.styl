@@ -1,0 +1,32 @@
+.tooltip-demo
+  .button
+    position: relative
+    border: 1px solid #ff6c03
+    color: #ff6c03
+    padding: 10px 20px
+    width: 160px
+    text-align: center
+    margin-top: 100px
+    &:first-child
+      margin-top: 0
+    &.button1
+      .tooltip
+        position: absolute
+        left: 0
+        bottom: -70px
+    &.button2
+      .tooltip
+        position: absolute
+        left: 0
+        top: -70px
+    &.button3
+      margin-left: 120px
+      .tooltip
+        position: absolute
+        left: -120px
+        top: 0
+    &.button4
+      .tooltip
+        position: absolute
+        right: -120px
+        top: 0
