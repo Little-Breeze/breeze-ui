@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Tab, Tabs } from './tabs.jsx';
-import './tab-switch';
+import './tabswitch.styl';
 
 export class TabCont extends Component {
 

@@ -1,22 +1,26 @@
 .tab-switch-demo
   width: 375px;
-  .tabs
+  .tabs-nav
     color: #666
     display: flex
-    padding: 0 80px
-    height: 84px
-    line-height: 82px
+    height: 40px
+    line-height: 40px
     background: #fff
     ul
       display: flex
       width: 100%
+      padding-left: 0
       li
         flex: 1
-        margin: 0 10px
-        .tabs-item
-          text-align: center
-          position: relative
+        list-style: none
+        text-align: center
+        position: relative
         &.active
           .nav-item
             border-bottom: 2px solid #ff6c03
             color: #ff6c03
+  .tabs-cont
+    margin-top: 40px
+    border: 1px solid #e5e5e5
+    height: 100px
+    padding: 20px

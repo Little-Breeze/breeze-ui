@@ -14,8 +14,9 @@ const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 const DefinePlugin = webpack.DefinePlugin;
 
 const appDir = path.resolve(process.cwd(), 'examples');
+const srcDir = path.resolve(process.cwd(), 'src');
 const distDir = path.resolve(process.cwd(), 'dist');
-const nodeModPath = path.resolve(__dirname, '../node_modules');
+const nodeModPath = path.resolve(__dirname, './node_modules');
 const pathMap = require('./pathmap.json')
 
 module.exports = () => {
@@ -38,7 +39,7 @@ module.exports = () => {
     },
 
     resolve: {
-      root: [appDir, nodeModPath],
+      root: [appDir, srcDir, nodeModPath],
       alias: pathMap,
       extensions: ['', '.js', '.jsx', '.css', '.styl', '.png', '.jpg']
     },
@@ -50,7 +51,7 @@ module.exports = () => {
         {
           test: /\.jsx?$/,
           // exclude: /node_modules/,
-          include: appDir,
+          include: [appDir, srcDir],
           loader: 'babel',
           query: {
             presets: ['react', 'env']
