@@ -1,0 +1,21 @@
+.radio-demo
+  .input-radio
+    display block
+    margin-bottom: 20px
+    input[type=radio]
+      display: none
+    input[type=radio] + label
+      display: inline-block
+      width: 36px
+      height: 36px
+      background: url('../../imgs/radio-unchecked.png') no-repeat
+      background-size: 100% 100%
+      margin-right: 10px
+      vertical-align: middle
+      
+    input[type=radio]:checked + label
+      background: url('../../imgs/radio-checked.png') no-repeat
+      background-size: 100% 100%
+    
+    input[type=radio]:disabled + label + .Form-ele__label
+      color: #858585

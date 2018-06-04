@@ -1,0 +1,21 @@
+.checkbox-demo
+  .input-check
+    display: block
+    margin-bottom: 20px
+    input[type=checkbox]
+      display: none
+    input[type=checkbox] + label
+      display: inline-block
+      width: 36px
+      height: 36px
+      background: url('../../imgs/check-unchecked.png') no-repeat
+      background-size: 100% 100%
+      margin-right: 10px
+      vertical-align: middle
+      
+    input[type=checkbox]:checked + label
+      background: url('../../imgs/check-checked.png') no-repeat
+      background-size: 100% 100%
+      
+    input[type=checkbox]:disabled + label + .Form-ele__label
+      color: #858585
