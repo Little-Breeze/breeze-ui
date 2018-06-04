@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e00b2c3d5ede42cc57d2"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "44b7107ad010b8d43579"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -20616,7 +20616,7 @@
 	  'tab-switch': _react2.default.createElement(_tabswitchdemo2.default, null),
 	  'tooltip': _react2.default.createElement(_tooltipdemo2.default, null),
 	  'checkbox': _react2.default.createElement(_checkboxdemo2.default, null),
-	  'radio-group': _react2.default.createElement(_radiodemo2.default, null)
+	  'radio': _react2.default.createElement(_radiodemo2.default, null)
 	};
 
 /***/ }),
