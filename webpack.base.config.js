@@ -33,9 +33,9 @@ module.exports = () => {
     },
 
     output: {
-      // path: distDir,
-      filename: 'dist/js/[name].[hash:8].js',
-      publicPath: publicPath
+      path: distDir,
+      filename: 'js/[name].[hash:8].js',
+      // publicPath: publicPath
     },
 
     resolve: {
@@ -89,7 +89,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: appDir + '/tmpl.ejs',
-        filename: 'dist/index.html',
+        filename: 'index.html',
         inject: 'body',
         // chunks: ['main']
         chunksSortMode: 'dependency'
