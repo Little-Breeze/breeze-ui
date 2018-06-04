@@ -6,7 +6,7 @@ import CheckboxDemo from './appmain/checkboxdemo';
 import RadioDemo from './appmain/radiodemo';
 
 export default {
-  'test': <Test />,
+  // 'test': <Test />,
   'tab-switch': <TabSwitchDemo />,
   'tooltip': <ToolTipDemo />,
   'checkbox': <CheckboxDemo />,

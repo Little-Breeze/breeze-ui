@@ -16,7 +16,7 @@ class Drawer extends Component {
         <ul>
           {
             Object.keys(listdata).map((name, i) => (
-              <li key={i} onClick={() => {this.props.onHandleItemClick(name)}}>{name}</li>
+              <li key={i} onTouchTap={() => {this.props.onHandleItemClick(name)}}>{name}</li>
             ))
           }
         </ul>

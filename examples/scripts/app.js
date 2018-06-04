@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       resize: false,
       showDrawer: false,
-      selected: ''
+      selected: 'tab-switch'
     };
   }
 
