@@ -4,11 +4,13 @@ import TabSwitchDemo from './appmain/tabswitchdemo';
 import ToolTipDemo from './appmain/tooltipdemo';
 import CheckboxDemo from './appmain/checkboxdemo';
 import RadioDemo from './appmain/radiodemo';
+import ProgressDemo from './appmain/progressdemo';
 
 export default {
   // 'test': <Test />,
   'tab-switch': <TabSwitchDemo />,
   'tooltip': <ToolTipDemo />,
   'checkbox': <CheckboxDemo />,
-  'radio': <RadioDemo />
+  'radio-group': <RadioDemo />,
+  'progress': <ProgressDemo />
 }
