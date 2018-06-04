@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Radio from '../../../src/radio/radio';
+import {Radio, RadioGroup} from '../../../src/radiogroup/radiogroup';
 import './radiodemo.styl';
 
 class RadioDemo extends Component {
@@ -10,26 +10,30 @@ class RadioDemo extends Component {
 
   onChange() {
     console.log('on change');
+    this.props.onChange && this.props.onChange() ;
   }
 
   render() {
     return (
-      <div className="radio-demo">
+      <RadioGroup className="radio-demo" selectedIndex={1}>
         <Radio name="input-radio" 
             className="input-radio" 
-            text="This is radio"
+            text="This is radio 1"
             onChange={this.onChange} />
         <Radio name="input-radio" 
             className="input-radio" 
-            text="This is radio"
-            onChange={this.onChange}
-            checked={true} />
+            text="This is radio 2"
+            onChange={this.onChange} />
         <Radio name="input-radio" 
             className="input-radio" 
-            text="This is radio"
+            text="This is radio 3"
+            onChange={this.onChange} />
+        <Radio name="input-radio" 
+            className="input-radio" 
+            text="This is radio 4"
             onChange={this.onChange}
-            disabled={true} />
-      </div>
+            disabled />
+      </RadioGroup>
     );
   }
 }
