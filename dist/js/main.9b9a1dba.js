@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6640b04ec89964b6ec8a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "9b9a1dba57c9d9277cbd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -20368,7 +20368,7 @@
 	    _this.state = {
 	      resize: false,
 	      showDrawer: false,
-	      selected: ''
+	      selected: 'tab-switch'
 	    };
 	    return _this;
 	  }
@@ -20559,7 +20559,7 @@
 	          Object.keys(_listdata2.default).map(function (name, i) {
 	            return _react2.default.createElement(
 	              'li',
-	              { key: i, onClick: function onClick() {
+	              { key: i, onTouchTap: function onTouchTap() {
 	                  _this2.props.onHandleItemClick(name);
 	                } },
 	              name
@@ -20612,7 +20612,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-	  'test': _react2.default.createElement(_test2.default, null),
+	  // 'test': <Test />,
 	  'tab-switch': _react2.default.createElement(_tabswitchdemo2.default, null),
 	  'tooltip': _react2.default.createElement(_tooltipdemo2.default, null),
 	  'checkbox': _react2.default.createElement(_checkboxdemo2.default, null),
