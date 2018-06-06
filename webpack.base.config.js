@@ -62,7 +62,7 @@ module.exports = () => {
           loaders: [
             // url-loader更好用，小于10KB的图片会自动转成dataUrl，
             // 否则则调用file-loader，参数直接传入
-            'url?limit=10000&name=imgs/[hash:8].[name].[ext]&publicPath=' + publicPath,
+            'url?limit=10000&name=imgs/[hash:8].[name].[ext]',
             'image-webpack?{bypassOnDebug:true, progressive:true,optimizationLevel:7,pngquant:{quality:"65-80",speed:4}}'
           ]
         },
