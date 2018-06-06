@@ -6,6 +6,7 @@ import CheckboxDemo from './appmain/checkboxdemo';
 import RadioDemo from './appmain/radiodemo';
 import ProgressDemo from './appmain/progressdemo';
 import IconDemo from './appmain/icondemo';
+import ButtonDemo from './appmain/buttondemo';
 
 export default {
   // 'test': <Test />,
@@ -14,5 +15,6 @@ export default {
   'checkbox': <CheckboxDemo />,
   'radio-group': <RadioDemo />,
   'progress': <ProgressDemo />,
-  'icon': <IconDemo />
+  'icon': <IconDemo />,
+  'button': <ButtonDemo />,
 }
