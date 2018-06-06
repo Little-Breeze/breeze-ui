@@ -7,6 +7,7 @@ import RadioDemo from './appmain/radiodemo';
 import ProgressDemo from './appmain/progressdemo';
 import IconDemo from './appmain/icondemo';
 import ButtonDemo from './appmain/buttondemo';
+import AvatarDemo from './appmain/avatardemo';
 
 export default {
   // 'test': <Test />,
@@ -17,4 +18,5 @@ export default {
   'progress': <ProgressDemo />,
   'icon': <IconDemo />,
   'button': <ButtonDemo />,
+  'avatar': <AvatarDemo />
 }
