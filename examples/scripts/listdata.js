@@ -5,6 +5,7 @@ import ToolTipDemo from './appmain/tooltipdemo';
 import CheckboxDemo from './appmain/checkboxdemo';
 import RadioDemo from './appmain/radiodemo';
 import ProgressDemo from './appmain/progressdemo';
+import IconDemo from './appmain/icondemo';
 
 export default {
   // 'test': <Test />,
@@ -12,5 +13,6 @@ export default {
   'tooltip': <ToolTipDemo />,
   'checkbox': <CheckboxDemo />,
   'radio-group': <RadioDemo />,
-  'progress': <ProgressDemo />
+  'progress': <ProgressDemo />,
+  'icon': <IconDemo />
 }
