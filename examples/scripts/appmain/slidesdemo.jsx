@@ -1,7 +1,13 @@
 import React, {Component} from 'react';
 import Slides from '../../../src/slides/slides';
 import Pannel from '../../../src/slides/pannel';
-// import './slidesdemo.styl';
+import './slidesdemo.styl';
+
+import img1 from '../../imgs/01.jpg';
+import img2 from '../../imgs/02.jpg';
+import img3 from '../../imgs/03.jpg';
+import img4 from '../../imgs/04.jpg';
+import img5 from '../../imgs/05.jpg';
 
 class SlidesDemo extends Component {
   constructor(props) {
@@ -11,10 +17,22 @@ class SlidesDemo extends Component {
   render() {
     return (
       <div className="slides-demo">
-        <Slides>
-          <Pannel />
-          <Pannel />
-          <Pannel />
+        <Slides className="slides-wrap">
+          <Pannel>
+            <img src={img1} />
+          </Pannel>
+          <Pannel>
+            <img src={img2} />
+          </Pannel>
+          <Pannel>
+            <img src={img3} />
+          </Pannel>
+          <Pannel>
+            <img src={img4} />
+          </Pannel>
+          <Pannel>
+            <img src={img5} />
+          </Pannel>
         </Slides>
       </div>
     );

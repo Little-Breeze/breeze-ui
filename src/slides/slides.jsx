@@ -30,6 +30,8 @@ class Slides extends Component {
     this.getContainerWH();
     this.initStyle();
     this.initEvent();
+    this.setPannelIndex(this.curPannelIndex);
+    this.setAutoRun(this.props.autoSlide);
   }
 
   getContainerWH() {
@@ -57,16 +59,16 @@ class Slides extends Component {
   }
 
   slideChange(num, callback) {
-    if (typeof index == 'number') {
-      this.moveBoxLeft = index * this.containerWidth;
+    if (typeof num == 'number') {
+      this.moveBoxLeft = num * this.containerWidth;
     } else {
       let nextPannelLeft = this.moveBoxLeft + this.containerWidth;
       let endPannelLeft = this.containerWidth * (this.pannelLength - 1);
       // 如果是最后一帧 特殊处理
-      if (this.nextPannelLeft > this.endPannelLeft) {
+      if (nextPannelLeft > endPannelLeft) {
         this.moveBoxLeft = 0;
       } else {
-        this.moveBoxLeft += this.pannelWidth;
+        this.moveBoxLeft += this.containerWidth;
       }
     }
     this.curPannelIndex = this.getPannelIndex();
@@ -89,8 +91,15 @@ class Slides extends Component {
     return tabListIndex <= 0 ? 0 : tabListIndex;
   }
 
-  setAutoRun(bool) {
-
+  setAutoRun(isRun, index) {
+    if (isRun) {
+      this.setIntervalObj = setInterval(() => {
+        this.slideChange(index);
+      }, this.props.viewTime);
+    } else {
+      clearInterval(this.setIntervalObj);
+      this.setIntervalObj = null;
+    }
   }
 
   renderChildren() {
