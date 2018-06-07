@@ -38,15 +38,15 @@ class TabSwitchDemo extends Component {
           <div className="tabs-cont">
             
             <TabCont>
-              <div>a</div>
+              <div>由来称独立，本自号倾城。</div>
             </TabCont>
 
             <TabCont>
-              <div>b</div>
+              <div>柳叶眉间发，桃花脸上生。</div>
             </TabCont>
 
             <TabCont>
-              <div>c</div>
+              <div>腕摇金钏响，步转玉环鸣。</div>
             </TabCont>
 
           </div>

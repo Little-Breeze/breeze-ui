@@ -8,6 +8,7 @@ import ProgressDemo from './appmain/progressdemo';
 import IconDemo from './appmain/icondemo';
 import ButtonDemo from './appmain/buttondemo';
 import AvatarDemo from './appmain/avatardemo';
+import SlidesDemo from './appmain/slidesdemo';
 
 export default {
   // 'test': <Test />,
@@ -18,5 +19,6 @@ export default {
   'progress': <ProgressDemo />,
   'icon': <IconDemo />,
   'button': <ButtonDemo />,
-  'avatar': <AvatarDemo />
+  'avatar': <AvatarDemo />,
+  'slides': <SlidesDemo />
 }
