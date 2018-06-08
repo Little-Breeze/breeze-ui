@@ -11,7 +11,7 @@ class Pannel extends Component {
 
   render() {
     const { children, className, selected, onTouchTap, ...others } = this.props;
-    const classes = classnames(className, { 'pannel_selected': selected });
+    const classes = classnames('pannel-content', className, { 'pannel-selected': selected });
     return (
       <div className={classes} {...others} onTouchTap={onTouchTap}>
         {

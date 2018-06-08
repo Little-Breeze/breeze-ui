@@ -17,7 +17,25 @@ class SlidesDemo extends Component {
   render() {
     return (
       <div className="slides-demo">
-        <Slides className="slides-wrap">
+        <Slides className="slides-wrap" defaultIndex={2}>
+          <Pannel>
+            <img src={img1} />
+          </Pannel>
+          <Pannel>
+            <img src={img2} />
+          </Pannel>
+          <Pannel>
+            <img src={img3} />
+          </Pannel>
+          <Pannel>
+            <img src={img4} />
+          </Pannel>
+          <Pannel>
+            <img src={img5} />
+          </Pannel>
+        </Slides>
+
+        <Slides className="slides-wrap" showNav={false} speed={500}>
           <Pannel>
             <img src={img1} />
           </Pannel>

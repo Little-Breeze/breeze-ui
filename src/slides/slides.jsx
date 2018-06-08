@@ -15,8 +15,8 @@ class Slides extends Component {
     };
     this.containerEl = null;
     this.scrollBoxEl = null;
-    this.pannelLength = this.props.children.length;
-    this.endPannelIndex = this.pannelLength - 1;
+    this.pannelNum = this.props.children.length;
+    this.endPannelIndex = this.pannelNum - 1;
     this.containerWidth = null;
     this.containerHeight = null;
     this.curPannelIndex = this.props.defaultIndex || 0;
@@ -45,7 +45,7 @@ class Slides extends Component {
       height: this.containerHeight,
     };
     let scrollBoxStyle = {
-      width: this.containerWidth * this.pannelLength,
+      width: this.containerWidth * this.pannelNum,
       height: this.containerHeight
     };
     this.setState({
@@ -63,7 +63,7 @@ class Slides extends Component {
       this.moveBoxLeft = num * this.containerWidth;
     } else {
       let nextPannelLeft = this.moveBoxLeft + this.containerWidth;
-      let endPannelLeft = this.containerWidth * (this.pannelLength - 1);
+      let endPannelLeft = this.containerWidth * (this.pannelNum - 1);
       // 如果是最后一帧 特殊处理
       if (nextPannelLeft > endPannelLeft) {
         this.moveBoxLeft = 0;
@@ -75,7 +75,10 @@ class Slides extends Component {
     let leftNum = this.moveBoxLeft <= 0 ? 0 : -this.moveBoxLeft;
     this.setState(prevState => {
       return {
-        scrollBoxStyle: {...prevState.scrollBoxStyle, left: leftNum}
+        scrollBoxStyle: {
+          ...prevState.scrollBoxStyle, 
+          left: leftNum, WebkitTransition: `left ${this.props.speed}ms ${this.props.effect}`
+        }
       }
     });
   }
@@ -102,6 +105,13 @@ class Slides extends Component {
     }
   }
 
+  componentWillUnmount() {
+    if (this.setIntervalObj) {
+      clearInterval(this.setIntervalObj);
+      this.setIntervalObj = null;
+    }
+  }
+
   renderChildren() {
     const { children, defaultIndex, pannelClass, onPannelTap } = this.props;
     return React.Children.map(children, (child, index) =>
@@ -114,16 +124,39 @@ class Slides extends Component {
     );
   }
 
+  renderNavContent() {
+    const { children } = this.props;
+    let navElList = [];
+    let length = children.length;
+    if (length > 1) {
+      for (let i = 0; i < length; i++) {
+        navElList.push(
+          <span key={i} className={classnames('nav-item', { 'selected': i === this.curPannelIndex })}></span>
+        );
+      }
+      return navElList;
+    } else {
+      return null;
+    }
+  }
+
   render() {
-    const { className, children, contentClass, ...others } = this.props;
+    const { className, children, contentClass,　showNav, navClass, ...others } = this.props;
     const classes = classnames('breeze-slides', className);
     return (
       <div className={classes} {...others} ref="container">
-        <div className={contentClass}>
+        <div className={classnames('slide-content', contentClass)}>
           <div className="scroll-box" ref="scrollBox" style={this.state.scrollBoxStyle}>
             { this.renderChildren() }
           </div>
         </div>
+        { 
+          showNav
+          &&
+          <div className={classnames('nav-content', navClass)} style={{width: this.containerWidth}}>
+            { this.renderNavContent() }
+          </div>
+        }
       </div>
     );
   }
@@ -133,10 +166,9 @@ Slides.defaultProps = {
   autoSlide: true,
   defaultIndex: 0,
   viewTime: 2000,
+  speed: 300,
   showNav: true,
-  contentClass: 'slide-content',
-  pannelClass: 'pannel-content',
-  navClass: 'nav-content',
+  effect: 'ease-in',
   onPannelTap: () => {} ,
 }
 
@@ -144,7 +176,8 @@ Slides.propTypes = {
   autoSlide: PropTypes.bool,
   defaultIndex: PropTypes.number,
   viewTime: PropTypes.number,  // 可视停留时间
-  effect: PropTypes.bool, // 动画效果
+  speed: PropTypes.number, //　动画时间
+  effect: PropTypes.string, // 动画效果
   onPannelTap: PropTypes.func,
   showNav: PropTypes.bool,
   contentClass: PropTypes.string,
