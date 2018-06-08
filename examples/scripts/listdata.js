@@ -13,6 +13,7 @@ import SlidesDemo from './appmain/slidesdemo';
 export default {
   // 'test': <Test />,
   'tab-switch': <TabSwitchDemo />,
+  'slides': <SlidesDemo />,
   'tooltip': <ToolTipDemo />,
   'checkbox': <CheckboxDemo />,
   'radio-group': <RadioDemo />,
@@ -20,5 +21,4 @@ export default {
   'icon': <IconDemo />,
   'button': <ButtonDemo />,
   'avatar': <AvatarDemo />,
-  'slides': <SlidesDemo />
 }
