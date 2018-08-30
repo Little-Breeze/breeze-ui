@@ -13,14 +13,14 @@ import DialogDemo from './appmain/dialogdemo';
 
 export default {
   // 'test': <Test />,
-  'tab-switch': <TabSwitchDemo />,
-  'slides': <SlidesDemo />,
-  'tooltip': <ToolTipDemo />,
-  'checkbox': <CheckboxDemo />,
-  'radio-group': <RadioDemo />,
-  'progress': <ProgressDemo />,
-  'icon': <IconDemo />,
   'button': <ButtonDemo />,
+  'icon': <IconDemo />,
   'avatar': <AvatarDemo />,
-  'dialog': <DialogDemo />
+  'checkbox': <CheckboxDemo />,
+  'progress': <ProgressDemo />,
+  'radio-group': <RadioDemo />,
+  'tooltip': <ToolTipDemo />,
+  'dialog': <DialogDemo />,
+  'slides': <SlidesDemo />,
+  'tab-switch': <TabSwitchDemo />,
 }
