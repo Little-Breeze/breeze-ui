@@ -9,6 +9,7 @@ import IconDemo from './appmain/icondemo';
 import ButtonDemo from './appmain/buttondemo';
 import AvatarDemo from './appmain/avatardemo';
 import SlidesDemo from './appmain/slidesdemo';
+import DialogDemo from './appmain/dialogdemo';
 
 export default {
   // 'test': <Test />,
@@ -21,4 +22,5 @@ export default {
   'icon': <IconDemo />,
   'button': <ButtonDemo />,
   'avatar': <AvatarDemo />,
+  'dialog': <DialogDemo />
 }
