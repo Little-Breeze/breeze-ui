@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Dialog from '../../../src/dialog/dialog';
-import Button from '../../../src/button/button';
+import { Dialog } from '../../../src/index';
+import { Button } from '../../../src/index';
 import './dialogdemo.styl';
 
 class DialogDemo extends Component {

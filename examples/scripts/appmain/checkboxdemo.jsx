@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Checkbox from '../../../src/checkbox/checkbox';
+import { Checkbox } from '../../../src/index';
 import './checkboxdemo.styl';
 
 class CheckboxDemo extends Component {

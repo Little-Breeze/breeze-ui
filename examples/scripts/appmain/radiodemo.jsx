@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Radio, RadioGroup} from '../../../src/radiogroup/radiogroup';
+import { Radio, RadioGroup } from '../../../src/index';
 import './radiodemo.styl';
 
 class RadioDemo extends Component {

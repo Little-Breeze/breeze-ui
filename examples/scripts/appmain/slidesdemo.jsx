@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import Slides from '../../../src/slides/slides';
-import Pannel from '../../../src/slides/pannel';
+import { Slides, Pannel } from '../../../src/index';
 import './slidesdemo.styl';
 
 import img1 from '../../imgs/01.jpg';

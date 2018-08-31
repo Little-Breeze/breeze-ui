@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ToolTip from '../../../src/tooltip/tooltip';
+import { ToolTip } from '../../../src/index';
 import './tooltipdemo.styl';
 
 class ToolTipDemo extends Component {

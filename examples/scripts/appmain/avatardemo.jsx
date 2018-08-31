@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import Avatar from '../../../src/avatar/avatar';
+import { Avatar } from '../../../src/index';
+console.log('avatar: ', Avatar);
 import './avatardemo.styl';
 import avatarImg from '../../imgs/avatar-demo.jpg';
 

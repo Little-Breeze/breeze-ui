@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Progress from '../../../src/progress/progress';
+import { Progress } from '../../../src/index';
 import './progressdemo.styl';
 
 class ProgressDemo extends Component {
