@@ -10,6 +10,7 @@ import ButtonDemo from './appmain/buttondemo';
 import AvatarDemo from './appmain/avatardemo';
 import SlidesDemo from './appmain/slidesdemo';
 import DialogDemo from './appmain/dialogdemo';
+import WizardDemo from './appmain/wizarddemo';
 
 export default {
   // 'test': <Test />,
@@ -23,4 +24,5 @@ export default {
   'dialog': <DialogDemo />,
   'slides': <SlidesDemo />,
   'tab-switch': <TabSwitchDemo />,
+  'wizard': <WizardDemo />,
 }

@@ -10,3 +10,4 @@ export { default as Pannel } from './slides/pannel';
 export { TabSwitch, TabCont }  from './tabswitch/tabswitch';
 export { Tabs, Tab }  from './tabswitch/tabs';
 export { default as ToolTip } from './tooltip/tooltip';
+export { Wizard, WzStep }  from './wizard/wizard';
