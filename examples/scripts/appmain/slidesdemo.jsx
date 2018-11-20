@@ -16,6 +16,7 @@ class SlidesDemo extends Component {
   render() {
     return (
       <div className="slides-demo">
+        水平滑动
         <Slides className="slides-wrap" defaultIndex={2}>
           <Pannel>
             <img src={img1} />
@@ -34,7 +35,27 @@ class SlidesDemo extends Component {
           </Pannel>
         </Slides>
 
-        <Slides className="slides-wrap" showNav={false} speed={500}>
+        垂直滑动
+        <Slides className="slides-wrap" showNav={false} speed={500} vertical={true}>
+          <Pannel>
+            <img src={img1} />
+          </Pannel>
+          <Pannel>
+            <img src={img2} />
+          </Pannel>
+          <Pannel>
+            <img src={img3} />
+          </Pannel>
+          <Pannel>
+            <img src={img4} />
+          </Pannel>
+          <Pannel>
+            <img src={img5} />
+          </Pannel>
+        </Slides>
+
+        手动滑动
+        <Slides className="slides-wrap" showNav={false} speed={500} autoSlide={false}>
           <Pannel>
             <img src={img1} />
           </Pannel>

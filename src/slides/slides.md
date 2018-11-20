@@ -20,7 +20,7 @@ navClass      tab_list
 
 selectedClass
 
-showNav
+dots
 
 slideBeforeFn
 
