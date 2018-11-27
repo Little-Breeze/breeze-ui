@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import { TabSwitch, TabCont }  from '../../../src/tabswitch/tabswitch';
-import { Tab, Tabs }  from '../../../src/tabswitch/tabs';
-// import Icon from './tabs';
+import { TabSwitch, TabCont, Tabs, Tab }  from '../../../src/index';
 import './tabswitchdemo.styl';
 
 class TabSwitchDemo extends Component {

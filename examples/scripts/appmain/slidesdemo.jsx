@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import Slides from '../../../src/slides/slides';
-import Pannel from '../../../src/slides/pannel';
+import { Slides, Pannel } from '../../../src/index';
 import './slidesdemo.styl';
 
 import img1 from '../../imgs/01.jpg';
@@ -17,7 +16,46 @@ class SlidesDemo extends Component {
   render() {
     return (
       <div className="slides-demo">
-        <Slides className="slides-wrap">
+        水平滑动
+        <Slides className="slides-wrap" defaultIndex={2}>
+          <Pannel>
+            <img src={img1} />
+          </Pannel>
+          <Pannel>
+            <img src={img2} />
+          </Pannel>
+          <Pannel>
+            <img src={img3} />
+          </Pannel>
+          <Pannel>
+            <img src={img4} />
+          </Pannel>
+          <Pannel>
+            <img src={img5} />
+          </Pannel>
+        </Slides>
+
+        垂直滑动
+        <Slides className="slides-wrap" showNav={false} speed={500} vertical={true}>
+          <Pannel>
+            <img src={img1} />
+          </Pannel>
+          <Pannel>
+            <img src={img2} />
+          </Pannel>
+          <Pannel>
+            <img src={img3} />
+          </Pannel>
+          <Pannel>
+            <img src={img4} />
+          </Pannel>
+          <Pannel>
+            <img src={img5} />
+          </Pannel>
+        </Slides>
+
+        手动滑动
+        <Slides className="slides-wrap" showNav={false} speed={500} autoSlide={false}>
           <Pannel>
             <img src={img1} />
           </Pannel>

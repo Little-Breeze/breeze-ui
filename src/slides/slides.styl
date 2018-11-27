@@ -1,19 +1,57 @@
 .breeze-slides
-  width: 100%
-  max-width: 375px
-  height: 200px
-  overflow: hidden
-  .scroll-box
-    position: relative
-    top: 0
-    margin: 0
-    padding: 0
-    overflow: hidden
-    .pannel-content
-      float: left
-      position: relative
-      overflow: hidden
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  
+  .slide-content
     
-      img
-        width: 100%
-        height: 100%
+    .scroll-box
+      position: relative
+      top: 0
+      margin: 0
+      padding: 0
+      .pannel-content
+        position: relative;
+        overflow: hidden;
+        img
+          width: 100%
+          height: 100%
+
+
+
+  .nav-content .nav-item
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    overflow: hidden;
+    background: #fff;
+    &.selected
+      background: #ff6c03;
+
+  .horizontal
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    .pannel-content 
+      float: left
+    .nav-item 
+      display: inline-block;
+      margin-left: 10px;
+      &:first-child
+        margin-left: 0;
+
+  .vertical
+    position: absolute;
+    width: 20px;
+    right: 10px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .nav-item 
+      display: block;
+      margin-top: 10px;
+      &:first-child 
+        margin-top: 0;
+        

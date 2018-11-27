@@ -1,9 +1,9 @@
-breeze-ui
 
+<p align="center">
+  <img width="320" src="./examples/imgs/logo.png" />
+</p>
 
-TODO:
+# breeze-ui
+React-based UI implementation.
 
-gulp 产出可以发布的NPM包
-
-gulp 产出可以发布的ShowCase
-
+## [官网](https://little-breeze.github.io/breeze-ui/dist/index.html)

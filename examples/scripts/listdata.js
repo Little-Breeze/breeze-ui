@@ -9,16 +9,20 @@ import IconDemo from './appmain/icondemo';
 import ButtonDemo from './appmain/buttondemo';
 import AvatarDemo from './appmain/avatardemo';
 import SlidesDemo from './appmain/slidesdemo';
+import DialogDemo from './appmain/dialogdemo';
+import WizardDemo from './appmain/wizarddemo';
 
 export default {
   // 'test': <Test />,
-  'tab-switch': <TabSwitchDemo />,
-  'tooltip': <ToolTipDemo />,
-  'checkbox': <CheckboxDemo />,
-  'radio-group': <RadioDemo />,
-  'progress': <ProgressDemo />,
-  'icon': <IconDemo />,
   'button': <ButtonDemo />,
+  'icon': <IconDemo />,
   'avatar': <AvatarDemo />,
-  'slides': <SlidesDemo />
+  'checkbox': <CheckboxDemo />,
+  'progress': <ProgressDemo />,
+  'radio-group': <RadioDemo />,
+  'tooltip': <ToolTipDemo />,
+  'dialog': <DialogDemo />,
+  'slides': <SlidesDemo />,
+  'tab-switch': <TabSwitchDemo />,
+  'wizard': <WizardDemo />,
 }

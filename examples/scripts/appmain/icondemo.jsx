@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Icon from '../../../src/icon/icon';
+import { Icon } from '../../../src/index';
 import './icondemo.styl';
 
 class IconDemo extends Component {

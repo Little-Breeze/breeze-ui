@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Button from '../../../src/button/button';
+import { Button } from '../../../src/index';
 import './buttondemo.styl';
 
 class ButtonDemo extends Component {
